@@ -292,7 +292,7 @@ if __name__ == '__main__':
 
         deepQ = DeepQ(network_inputs, network_outputs, memorySize, discountFactor, learningRate, learnStart)
         deepQ.initNetworks(network_structure)
-        env.monitor.start(outdir, force=True, seed=None)
+        env = gym.wrapper.Monitor(env, outdir)
     else:
         #Load weights, monitor info and parameter info.
         #ADD TRY CATCH fro this else
