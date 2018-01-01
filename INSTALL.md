@@ -114,7 +114,13 @@ sudo pip3 install keras
 - `wiimote` not compiling. `CATKIN_IGNORE`d.
 - `kobuki_qtestsuite` not compiling. `CATKIN_IGNORE`d.
 
-
+editing the gazebo.repos file which can be found at gym_gazebo/envs/installation and adding adding the following (in place of the other two alvar related entries)
+```
+ ar_track_alvar:
+   type: git
+   url: https://github.com/ros-perception/ar_track_alvar.git
+   version: kinetic-devel
+```
 Agent dependencies:
 ```bash
 cd gym_gazebo/envs/installation
