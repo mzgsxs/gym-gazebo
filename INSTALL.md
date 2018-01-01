@@ -114,6 +114,13 @@ sudo pip3 install keras
 - `wiimote` not compiling. `CATKIN_IGNORE`d.
 - `kobuki_qtestsuite` not compiling. `CATKIN_IGNORE`d.
 
+Build driver_base python file
+```
+cd catkin_ws
+catkin_make --pkg driver_base
+cd ..
+```
+
 editing the gazebo.repos file which can be found at gym_gazebo/envs/installation and adding adding the following (in place of the other two alvar related entries)
 ```
  ar_track_alvar:
